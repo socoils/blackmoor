@@ -11,9 +11,16 @@ import { CHARACTER_GENERATOR } from '../shared/character-generator.injection-tok
 export class AppComponent implements OnInit {
   public monster: Monster;
 
-  public constructor(@Inject(CHARACTER_GENERATOR) private monsterGeneratorService: ICharacterGenerator) {}
+  public constructor(
+    @Inject(CHARACTER_GENERATOR)
+    private monsterGeneratorService: ICharacterGenerator
+  ) {}
 
   public ngOnInit(): void {
+    this.generateNewMonster();
+  }
+
+  private generateNewMonster(): void {
     this.monster = this.monsterGeneratorService.generate();
   }
 }
