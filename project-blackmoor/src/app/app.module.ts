@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { PictureComponent } from '../app-picture.component/app-picture.component';
 import { StatsComponent } from '../app-stats.component/app-stats.component';
 import { BioComponent } from '../app-bio.component/app-bio.component';
+import { MonsterGeneratorService } from '../monster-generator/monster-generator.service';
+import { CharacterGenerator } from '../shared/character-generator.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { BioComponent } from '../app-bio.component/app-bio.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    { provide: CharacterGenerator, useClass: MonsterGeneratorService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
