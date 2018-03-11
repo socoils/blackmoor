@@ -1,11 +1,12 @@
 <div>
-  <div class="alert alert-success" role="alert">
+    {{monster|json}}
+    <div class="alert alert-success" role="alert">
     <h1 class="alert-heading" align="center">Welcome to Project Blackmoor</h1>
     <p align="center">You are a very fortunate person. You have miraculously landed on the page of Project Blackmoor.</p>
   </div>
   <div class="row">
     <div class="col-sm">
-      <app-bio-component></app-bio-component>
+      <app-bio-component [biography]="monster.biography"></app-bio-component>
     </div>
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
@@ -18,7 +19,7 @@
       </div>
     </div>
     <div class="col-sm">
-      <app-stats-component></app-stats-component>
+      <app-stats-component [statistics]="monster.statistics"></app-stats-component>
     </div>
   </div>
 </div>

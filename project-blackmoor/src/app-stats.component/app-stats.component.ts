@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Statistic } from "./stats.model";
 
 @Component({
@@ -6,7 +6,7 @@ import { Statistic } from "./stats.model";
     templateUrl: './app-stats.component.html' 
 })
 export class StatsComponent {
-    public statistics = new Statistic('Blue','Too tall','Chinese food','Riding','');
+    @Input() statistics : Statistic;
 }
 
     

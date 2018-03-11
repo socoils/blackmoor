@@ -1,8 +1,10 @@
+import { LocationInfo } from "./location.model";
+
 export class Biography {
   public name: string;
   public description: string;
   public dob: Date;
-  public placeOfBirth: Location;
+  public placeOfBirth: LocationInfo;
   public ref: string;
 
   public getAge(): number {
@@ -19,24 +21,8 @@ export class Biography {
     this.description = description;
     this.dob = dob;
     this.placeOfBirth = placeOfBirth;
-    if (this.ref == null){
+    if (this.ref == null) {
       this.ref = "";
     }
-  }
-}
-
-export class Location {
-  public city: string;
-  public cityRef: string;
-  public province: string;
-  public provinceRef: string;
-  public country: string;
-  public countryRef: string;
-
-  public constructor(city, province, country, cityRef) {
-    this.city = city;
-    this.cityRef = cityRef;
-    this.province = province;
-    this.country = country;
   }
 }

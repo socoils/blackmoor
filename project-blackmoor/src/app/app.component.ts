@@ -22,5 +22,6 @@ export class AppComponent implements OnInit {
 
   private generateNewMonster(): void {
     this.monster = this.monsterGeneratorService.generate();
+    console.log("here");
   }
 }
