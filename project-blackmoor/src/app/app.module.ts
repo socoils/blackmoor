@@ -7,7 +7,6 @@ import { PictureComponent } from '../app-picture.component/app-picture.component
 import { StatsComponent } from '../app-stats.component/app-stats.component';
 import { BioComponent } from '../app-bio.component/app-bio.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

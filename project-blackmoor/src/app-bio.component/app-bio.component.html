@@ -1,9 +1,9 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{biography.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{biography.getAge()}}</h6>
-    <p class="card-text">{{biography.placeOfBirth}}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title">Biography</h5>
+    <h6 class="card-subtitle mb-2 text-muted"><a href="http://sophiadoiron.com/" class="card-link">{{biography.name}}</a></h6>
+    <p class="card-text">{{biography.getAge()}}</p>
+    <a [href]="biography.placeOfBirth.cityRef" class="card-link">{{biography.placeOfBirth.city}}</a>
+    <a href="https://en.wikipedia.org/wiki/New_Brunswick" class="card-link">{{biography.placeOfBirth.province}}</a>
   </div>
 </div>
