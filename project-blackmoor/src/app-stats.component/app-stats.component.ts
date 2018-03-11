@@ -6,7 +6,7 @@ import { Statistic } from "./stats.model";
     templateUrl: './app-stats.component.html' 
 })
 export class StatsComponent {
-    public statistics = new Statistic('Blue','Too tall','Loves to ride ... Soph');
+    public statistics = new Statistic('Blue','Too tall','Chinese food','Riding','');
 }
 
     
