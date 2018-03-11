@@ -40,7 +40,7 @@ export class MonsterGeneratorService implements ICharacterGenerator {
   }
 
   private getRandomPicture(pictures: Array<Picture>): Picture {
-    const randomIndex = Math.floor(pictures.length - 1);
+    const randomIndex = Math.floor((Math.random() * pictures.length - 1) + 1);
     return pictures[randomIndex];
   }
 }
