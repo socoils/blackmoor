@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Picture } from './picture.model';
 
 @Component({
@@ -6,11 +6,7 @@ import { Picture } from './picture.model';
   templateUrl: './app-picture.component.html'
 })
 export class PictureComponent {
-  public pic: Picture;
+  @Input() public pic: Picture;
 
-  public constructor() {
-    this.pic = new Picture();
-    this.pic.alt = 'alternate text';
-    this.pic.href = '.\\assets\\images\\monsters\\scorpion\\scorpion1.GIF';
-  }
+  public constructor() {}
 }
