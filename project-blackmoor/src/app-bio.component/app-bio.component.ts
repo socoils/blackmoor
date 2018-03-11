@@ -7,5 +7,5 @@ import { Location } from './biography.model';
   templateUrl: './app-bio.component.html'
 })
 export class BioComponent {
-  public biography = new Biography('Dani', new Date('1968-07-20'), new Location('Victoriaville', 'Québec', 'Canada', 'https://en.wikipedia.org/wiki/Victoriaville'));
+  public biography = new Biography('Dani', 'Not really sure what to put here as most things I think of would be in Stats? LOL', new Date('1968-07-20'), new Location('Victoriaville', 'Québec', 'Canada', 'https://en.wikipedia.org/wiki/Victoriaville'));
 }

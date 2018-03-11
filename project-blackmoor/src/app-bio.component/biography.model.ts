@@ -1,5 +1,6 @@
 export class Biography {
   public name: string;
+  public description: string;
   public dob: Date;
   public placeOfBirth: Location;
   public ref: string;
@@ -13,10 +14,14 @@ export class Biography {
     }
     return Math.abs(ageDiff);
   }
-  public constructor(name, dob, placeofBirth) {
+  public constructor(name, description, dob, placeOfBirth) {
     this.name = name;
+    this.description = description;
     this.dob = dob;
-    this.placeOfBirth = placeofBirth;
+    this.placeOfBirth = placeOfBirth;
+    if (this.ref == null){
+      this.ref = "";
+    }
   }
 }
 

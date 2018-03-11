@@ -1,9 +1,22 @@
+<style>
+  .bordered {
+    border: 1px dotted rgb(248, 99, 241);
+  }
+</style>
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Biography</h5>
-    <h6 class="card-subtitle mb-2 text-muted"><a href="http://sophiadoiron.com/" class="card-link">{{biography.name}}</a></h6>
-    <p class="card-text">{{biography.getAge()}}</p>
-    <a [href]="biography.placeOfBirth.cityRef" class="card-link">{{biography.placeOfBirth.city}}</a>
-    <a href="https://en.wikipedia.org/wiki/New_Brunswick" class="card-link">{{biography.placeOfBirth.province}}</a>
+    <h6 class="card-subtitle mb-2 text-muted" style="background-color:rgb(248, 99, 241)">
+      <a [href]="biography.ref" class="card-link">{{biography.name}}</a>
+    </h6>
+    <p class="card-text">{{biography.description}}</p>
+    <p class="card-text">Age: {{biography.getAge()}}</p>
+    <div class="bordered">
+      <p class="card-text">Place of birth</p>
+      <p class="card-text">
+        <a [href]="biography.placeOfBirth.cityRef" class="card-link">{{biography.placeOfBirth.city}}</a>
+        <a href="https://en.wikipedia.org/wiki/New_Brunswick" class="card-link">{{biography.placeOfBirth.province}}</a>
+      </p>
+    </div>
   </div>
 </div>
