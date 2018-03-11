@@ -9,6 +9,7 @@ import { ICharacterGenerator } from '../shared/character-generator.service.inter
 import { CHARACTER_GENERATOR } from '../shared/character-generator.injection-token';
 import { Picture } from '../app-picture.component/picture.model';
 import { MonsterVariables } from '../monster-generator/monster-variables-model';
+import { LocationInfo } from '../app-bio.component/location.model';
 
 @Component({
   selector: 'app-root',
@@ -30,27 +31,19 @@ export class AppComponent implements OnInit {
     private monsterGeneratorService: ICharacterGenerator
   ) {}
 
-  private createPictureModel(data: any): Picture {
-    const picture = new Picture();
-    picture.alt = data.alt;
-    picture.href = data.href;
-
-    return picture;
-  }
-
   public ngOnInit(): void {
-    this.getPicturesFromDatabase();
+    this.getDataFromDatabase();
   }
 
-  private getPicturesFromDatabase(): void {
+  private getDataFromDatabase(): void {
     this.db
-      .list<Picture>('monster/pictures')
+      .list<any>('monster')
       .valueChanges()
       .subscribe(
         result => {
-          this.monsterVariables.pictures = result.map(data =>
-            this.createPictureModel(data)
-          );
+          this.monsterVariables.locations = result[0].map(data => this.createLocationInfoModel(data));
+
+          this.monsterVariables.pictures = result[1].map(data => this.createPictureModel(data));
 
           this.generateNewMonster();
         },
@@ -58,6 +51,25 @@ export class AppComponent implements OnInit {
       );
 
     this.user = this.afAuth.authState;
+  }
+
+  private createLocationInfoModel(data: any): LocationInfo {
+    const location = new LocationInfo(
+      data.city,
+      data.province,
+      data.country,
+      data.link
+    );
+
+    return location;
+  }
+
+  private createPictureModel(data: any): Picture {
+    const picture = new Picture();
+    picture.alt = data.alt;
+    picture.href = data.href;
+
+    return picture;
   }
 
   private generateNewMonster(): void {

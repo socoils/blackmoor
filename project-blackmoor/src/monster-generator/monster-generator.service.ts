@@ -20,12 +20,7 @@ export class MonsterGeneratorService implements ICharacterGenerator {
       ''
     );
 
-    const location = new LocationInfo(
-      'Victoriaville',
-      'Québec',
-      'Canada',
-      'https://en.wikipedia.org/wiki/Victoriaville'
-    );
+    const location = this.getRandomLocation(variables.locations);
 
     monster.biography = new Biography(
       'Dani',
@@ -39,8 +34,13 @@ export class MonsterGeneratorService implements ICharacterGenerator {
     return monster;
   }
 
+  private getRandomLocation(locations: Array<LocationInfo>): LocationInfo {
+    const randomIndex = Math.floor(Math.random() * locations.length - 1 + 1);
+    return locations[randomIndex];
+  }
+
   private getRandomPicture(pictures: Array<Picture>): Picture {
-    const randomIndex = Math.floor((Math.random() * pictures.length - 1) + 1);
+    const randomIndex = Math.floor(Math.random() * pictures.length - 1 + 1);
     return pictures[randomIndex];
   }
 }
