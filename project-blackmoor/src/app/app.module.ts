@@ -13,6 +13,8 @@ import { BioComponent } from '../app-bio.component/app-bio.component';
 import { MonsterGeneratorService } from '../monster-generator/monster-generator.service';
 import { CHARACTER_GENERATOR } from '../shared/character-generator.injection-token';
 import { FooterComponent } from '../app-footer/app-footer.component';
+import { HealthComponent } from '../app-health.component/app-health.component';
+import { ProgressBarModule } from '../app-progress-bar/progress-bar.module';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAkLGx785uCQ3tqKXtTIkwrYPZz3T73qzI',
@@ -29,10 +31,12 @@ export const firebaseConfig = {
     PictureComponent,
     BioComponent,
     StatsComponent,
-    FooterComponent
+    FooterComponent,
+    HealthComponent
   ],
   imports: [
     BrowserModule,
+    ProgressBarModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
