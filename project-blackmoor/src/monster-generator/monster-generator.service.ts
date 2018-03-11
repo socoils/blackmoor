@@ -20,8 +20,6 @@ export class MonsterGeneratorService implements ICharacterGenerator {
       ''
     );
 
-    const location = this.getRandomLocation(variables.locations);
-
     monster.biography = new Biography(
       'Dani',
       'Not really sure what to put here as most things I think of would be in Stats? LOL',
@@ -29,18 +27,22 @@ export class MonsterGeneratorService implements ICharacterGenerator {
       location
     );
 
+
+    monster.biography.placeOfBirth = this.getRandomLocation(variables.locations);
+
+
     monster.picture = this.getRandomPicture(variables.pictures);
 
     return monster;
   }
 
   private getRandomLocation(locations: Array<LocationInfo>): LocationInfo {
-    const randomIndex = Math.floor(Math.random() * locations.length - 1 + 1);
+    const randomIndex = Math.floor((Math.random() * locations.length - 1) + 1);
     return locations[randomIndex];
   }
 
   private getRandomPicture(pictures: Array<Picture>): Picture {
-    const randomIndex = Math.floor(Math.random() * pictures.length - 1 + 1);
+    const randomIndex = Math.floor((Math.random() * pictures.length - 1) + 1);
     return pictures[randomIndex];
   }
 }

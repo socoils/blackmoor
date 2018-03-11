@@ -21,8 +21,6 @@ export class AppComponent implements OnInit {
   public monster: Monster;
 
   user: Observable<firebase.User>;
-  items: AngularFireList<any[]>;
-  msgVal = '';
 
   constructor(
     public afAuth: AngularFireAuth,
@@ -42,7 +40,6 @@ export class AppComponent implements OnInit {
       .subscribe(
         result => {
           this.monsterVariables.locations = result[0].map(data => this.createLocationInfoModel(data));
-
           this.monsterVariables.pictures = result[1].map(data => this.createPictureModel(data));
 
           this.generateNewMonster();
