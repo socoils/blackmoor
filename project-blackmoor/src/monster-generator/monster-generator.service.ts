@@ -4,28 +4,43 @@ import { ICharacterGenerator } from '../shared/character-generator.service.inter
 import { Statistic } from '../app-stats.component/stats.model';
 import { Biography } from '../app-bio.component/biography.model';
 import { LocationInfo } from '../app-bio.component/location.model';
+import { MonsterVariables } from './monster-variables-model';
+import { Picture } from '../app-picture.component/picture.model';
 
 @Injectable()
 export class MonsterGeneratorService implements ICharacterGenerator {
-  public static readonly MIN_IMAGES = 1;
-  public static readonly MAX_IMAGES = 6;
-
-  public generate(): Monster {
+  public generate(variables: MonsterVariables): Monster {
     const monster = new Monster();
 
-    const imageNum =
-      Math.floor(Math.random() * MonsterGeneratorService.MAX_IMAGES) +
-      MonsterGeneratorService.MIN_IMAGES;
+    monster.statistics = new Statistic(
+      'Blue',
+      'Too tall',
+      'Chinese food',
+      'Riding',
+      ''
+    );
 
-    monster.picture.href = '.\\assets\\images\\monsters\\scorpion\\scorpion' + imageNum + '.GIF';
-    monster.picture.alt = 'scorpion';
+    const location = new LocationInfo(
+      'Victoriaville',
+      'Québec',
+      'Canada',
+      'https://en.wikipedia.org/wiki/Victoriaville'
+    );
 
-    monster.statistics = new Statistic('Blue','Too tall','Chinese food','Riding','');
+    monster.biography = new Biography(
+      'Dani',
+      'Not really sure what to put here as most things I think of would be in Stats? LOL',
+      new Date('1968-07-20'),
+      location
+    );
 
-    const location = new LocationInfo('Victoriaville', 'Québec', 'Canada', 'https://en.wikipedia.org/wiki/Victoriaville');
-
-    monster.biography = new Biography('Dani', 'Not really sure what to put here as most things I think of would be in Stats? LOL', new Date('1968-07-20'),location);
+    monster.picture = this.getRandomPicture(variables.pictures);
 
     return monster;
+  }
+
+  private getRandomPicture(pictures: Array<Picture>): Picture {
+    const randomIndex = Math.floor(pictures.length - 1);
+    return pictures[randomIndex];
   }
 }

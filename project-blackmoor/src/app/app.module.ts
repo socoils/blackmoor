@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from 'angularfire2';
 
+// New imports to update based on AngularFire2 version 4
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { PictureComponent } from '../app-picture.component/app-picture.component';
@@ -9,6 +13,15 @@ import { BioComponent } from '../app-bio.component/app-bio.component';
 import { MonsterGeneratorService } from '../monster-generator/monster-generator.service';
 import { CHARACTER_GENERATOR } from '../shared/character-generator.injection-token';
 import { FooterComponent } from '../app-footer/app-footer.component';
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyAkLGx785uCQ3tqKXtTIkwrYPZz3T73qzI',
+  authDomain: 'projectblackmoor.firebaseapp.com',
+  databaseURL: 'https://projectblackmoor.firebaseio.com',
+  projectId: 'projectblackmoor',
+  storageBucket: 'projectblackmoor.appspot.com',
+  messagingSenderId: '963310124819'
+};
 
 @NgModule({
   declarations: [
@@ -19,11 +32,14 @@ import { FooterComponent } from '../app-footer/app-footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
-    { provide: CHARACTER_GENERATOR, useClass: MonsterGeneratorService}
+    { provide: CHARACTER_GENERATOR, useClass: MonsterGeneratorService }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
