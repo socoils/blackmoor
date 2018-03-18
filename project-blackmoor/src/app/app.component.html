@@ -1,8 +1,77 @@
-<h1>Welcome to Project Blackmoor
-</h1>
-<h1>Example heading <span class="badge badge-secondary">New</span></h1>
-<h2>Example heading <span class="badge badge-secondary">New</span></h2>
-<h3>Example heading <span class="badge badge-secondary">New</span></h3>
-<h4>Example heading <span class="badge badge-secondary">New</span></h4>
-<h5>Example heading <span class="badge badge-secondary">New</span></h5>
-<h6>Example heading <span class="badge badge-secondary">New</span></h6>
+<!-- <div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4 text-center">Project Blackmoor</h1>
+</div>
+<div class="container" background="bgimage.jpg">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <app-bio-component [biography]="monster?.biography"></app-bio-component>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <app-picture-component [pic]="monster?.picture"></app-picture-component>
+        <div class="card-body">
+          <button (click)="generateNewMonster()">Generate Again!</button>
+          <br>
+          <a href='https://www.freepik.com/free-vector/scorpion-with-different-facial-expressions_1190761.htm'>Designed by Freepik</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <app-stats-component [statistics]="monster?.statistics"></app-stats-component>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <app-health></app-health>
+    </div>
+    <div class="col-sm"></div>
+    <div class="col-sm"></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+	<div>
+		<div class="text-center">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 text-center">Project Blackmoor</h1>
+      </div>
+    </div>
+		<div class="row">
+			<div class="col text-center">
+        <app-bio-component [biography]="monster?.biography"></app-bio-component>
+      </div>
+			<div class="col text-center">
+        <app-picture-component [pic]="monster?.picture"></app-picture-component>
+        <div class="card-body">
+          <button (click)="generateNewMonster()">Generate Again!</button>
+        </div>
+      </div>
+			<div class="col text-center">
+        <app-stats-component [statistics]="monster?.statistics"></app-stats-component>
+      </div>
+    </div>
+		<div class="row">
+			<div class="col text-center">
+        <app-health></app-health>
+      </div>
+			<div class="col text-center">
+      </div>
+			<div class="col text-center">
+      </div>
+		</div>    
+	  <div class="text-center">
+      <app-footer></app-footer>
+    </div>
+	</div>
+</div>
+
