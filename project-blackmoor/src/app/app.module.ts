@@ -15,6 +15,7 @@ import { CHARACTER_GENERATOR } from '../shared/character-generator.injection-tok
 import { FooterComponent } from '../app-footer/app-footer.component';
 import { HealthComponent } from '../app-health.component/app-health.component';
 import { ProgressBarModule } from '../app-progress-bar/progress-bar.module';
+import { PortfolioComponent } from '../app-portfolio.component/app-portfolio.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAkLGx785uCQ3tqKXtTIkwrYPZz3T73qzI',
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     BioComponent,
     StatsComponent,
     FooterComponent,
-    HealthComponent
+    HealthComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

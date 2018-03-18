@@ -20,9 +20,16 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "../src/assets/bootstrap/css/bootstrap.min.css",
+        "../src/assets/magnific-popup/magnific-popup.css",
+        "../src/assets/css/freelancer.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../src/assets/jquery/jquery.min.js",
+        "../src/assets/bootstrap/js/bootstrap.bundle.min.js",
+        "../src/assets/magnific-popup/jquery.magnific-popup.min.js",
+        "../src/assets/jquery-easing/jquery.easing.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
