@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-header.component.css']
 })
 export class HeaderComponent {
-  public scroll(): void {
+  public jquery: any;
+  public $: any;
 
-  }
+  public scroll(): void {}
 }

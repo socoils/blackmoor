@@ -7,16 +7,12 @@
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color:#278df3;
     border: 0;
     background-color: #fc67fcec;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
-  #mainNav .navbar-brand {
-    color: #278df3;
-    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
-  }
   
   #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #fc67fcec;
@@ -27,7 +23,7 @@
     font-weight: 400;
     padding: 0.75em 0;
     letter-spacing: 1px;
-    color: white;
+    color: #278df3;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   

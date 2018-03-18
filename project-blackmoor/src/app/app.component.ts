@@ -17,6 +17,9 @@ import { LocationInfo } from '../app-bio.component/location.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  public jquery: any;
+  public $: any;
+
   public monsterVariables = new MonsterVariables();
   public monster: Monster;
 
@@ -39,8 +42,12 @@ export class AppComponent implements OnInit {
       .valueChanges()
       .subscribe(
         result => {
-          this.monsterVariables.locations = result[0].map(data => this.createLocationInfoModel(data));
-          this.monsterVariables.pictures = result[1].map(data => this.createPictureModel(data));
+          this.monsterVariables.locations = result[0].map(data =>
+            this.createLocationInfoModel(data)
+          );
+          this.monsterVariables.pictures = result[1].map(data =>
+            this.createPictureModel(data)
+          );
 
           this.generateNewMonster();
         },

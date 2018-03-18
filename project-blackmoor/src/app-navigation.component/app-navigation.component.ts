@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-navigation.component.css']
 })
 export class NavigationComponent {
-  public scroll(): void {
+  public jquery: any;
+  public $: any;
 
-  }
+  public scroll(): void {}
 }
