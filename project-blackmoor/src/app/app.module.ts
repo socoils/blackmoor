@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 // New imports to update based on AngularFire2 version 4
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -45,7 +46,8 @@ export const firebaseConfig = {
     ProgressBarModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     { provide: CHARACTER_GENERATOR, useClass: MonsterGeneratorService }

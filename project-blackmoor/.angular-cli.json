@@ -22,7 +22,8 @@
         "styles.css",
         "../src/assets/bootstrap/css/bootstrap.min.css",
         "../src/assets/magnific-popup/magnific-popup.css",
-        "../src/assets/css/freelancer.min.css"
+        "../src/assets/css/freelancer.min.css",
+        "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [
         "../src/assets/jquery/jquery.min.js",
