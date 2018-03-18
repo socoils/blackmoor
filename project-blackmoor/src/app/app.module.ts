@@ -16,7 +16,8 @@ import { FooterComponent } from '../app-footer/app-footer.component';
 import { HealthComponent } from '../app-health.component/app-health.component';
 import { ProgressBarModule } from '../app-progress-bar/progress-bar.module';
 import { PortfolioComponent } from '../app-portfolio.component/app-portfolio.component';
-import { NavbarComponent } from '../app-navbar.component/app-navbar.component';
+import { AppHeaderComponent } from '../app-header.component/app-header.component';
+import { AboutComponent } from '../app-about.component/app-about.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAkLGx785uCQ3tqKXtTIkwrYPZz3T73qzI',
@@ -36,7 +37,8 @@ export const firebaseConfig = {
     FooterComponent,
     HealthComponent,
     PortfolioComponent,
-    NavbarComponent
+    AppHeaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
