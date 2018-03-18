@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid">
+<!-- <div class="jumbotron jumbotron-fluid">
   <h1 class="display-4 text-center">Project Blackmoor</h1>
 </div>
 <div class="container" background="bgimage.jpg">
@@ -37,4 +37,41 @@
       <app-footer></app-footer>
     </div>
   </div>
+</div> -->
+
+<div class="container">
+	<div>
+		<div class="text-center">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 text-center">Project Blackmoor</h1>
+      </div>
+    </div>
+		<div class="row">
+			<div class="col text-center">
+        <app-bio-component [biography]="monster?.biography"></app-bio-component>
+      </div>
+			<div class="col text-center">
+        <app-picture-component [pic]="monster?.picture"></app-picture-component>
+        <div class="card-body">
+          <button (click)="generateNewMonster()">Generate Again!</button>
+        </div>
+      </div>
+			<div class="col text-center">
+        <app-stats-component [statistics]="monster?.statistics"></app-stats-component>
+      </div>
+    </div>
+		<div class="row">
+			<div class="col text-center">
+        <app-health></app-health>
+      </div>
+			<div class="col text-center">
+      </div>
+			<div class="col text-center">
+      </div>
+		</div>    
+	  <div class="text-center">
+      <app-footer></app-footer>
+    </div>
+	</div>
 </div>
+
