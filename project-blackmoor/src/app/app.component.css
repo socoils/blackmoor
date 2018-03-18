@@ -28,15 +28,15 @@ html {
   }
   
   a {
-    color: #fed136;
+    color: #fc67fcec;
   }
   
   a:hover {
-    color: #fec503;
+    color: #fc67fcec;
   }
   
   .text-primary {
-    color: #fed136 !important;
+    color: #fc67fcec !important;
   }
   
   h1,
@@ -85,8 +85,8 @@ html {
   }
   
   .btn-primary {
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #fc67fcec;
+    border-color: #fc67fcec;
   }
   
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
@@ -100,12 +100,12 @@ html {
   }
   
   ::-moz-selection {
-    background: #fed136;
+    background: #fc67fcec;
     text-shadow: none;
   }
   
   ::selection {
-    background: #fed136;
+    background: #fc67fcec;
     text-shadow: none;
   }
   
@@ -128,17 +128,17 @@ html {
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background-color: #fc67fcec;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
   #mainNav .navbar-brand {
-    color: #fed136;
+    color: #278df3;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
   }
   
   #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: #fec503;
+    color: #fc67fcec;
   }
   
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -151,7 +151,7 @@ html {
   }
   
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: #fc67fcec;
   }
   
   @media (min-width: 992px) {
@@ -469,7 +469,7 @@ html {
     color: white;
     border: 7px solid #e9ecef;
     border-radius: 100%;
-    background-color: #fed136;
+    background-color: #fc67fcec;
   }
   
   .timeline > li .timeline-image h4 {
@@ -640,7 +640,7 @@ html {
   }
   
   section#contact .form-control:focus {
-    border-color: #fed136;
+    border-color: #fc67fcec;
     box-shadow: none;
   }
   
@@ -710,6 +710,6 @@ html {
   }
   
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #fed136;
+    background-color: #fc67fcec;
   }
   
