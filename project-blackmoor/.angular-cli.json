@@ -27,8 +27,9 @@
       "scripts": [
         "../src/assets/jquery/jquery.min.js",
         "../src/assets/bootstrap/js/bootstrap.bundle.min.js",
+        "../src/assets/jquery-easing/jquery.easing.min.js",
         "../src/assets/magnific-popup/jquery.magnific-popup.min.js",
-        "../src/assets/jquery-easing/jquery.easing.min.js"
+        "../src/assets/freelancer.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
