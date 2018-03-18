@@ -5,4 +5,6 @@ import * as $ from 'jquery';
   templateUrl: './app-portfolio.component.html',
   selector: 'app-portfolio'
 })
-export class PortfolioComponent {}
+export class PortfolioComponent {
+
+}
